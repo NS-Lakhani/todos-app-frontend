@@ -1,0 +1,13 @@
+<div class="container">
+    Welcome {{name}} to ToDos Application. <br>
+    You can manage your todos <a routerLink="/todos">here</a>
+</div>
+
+<div>
+    Click here for custom welcome msg. <br>
+    <button (click)="getCustomWelcomeMsg()" class="btn btn-success">Get Custom Msg</button>
+</div>
+
+<div *ngIf="welcomeMsg">
+    {{welcomeMsg}}
+</div>

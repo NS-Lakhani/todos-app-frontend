@@ -1,0 +1,14 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="#" class="navbar-brand">ToDos Application</a></div>
+        <ul class="navbar-nav">
+            <li><a routerLink="/welcome/nishat" class="nav-link" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Home</a></li>
+            <li><a routerLink="/todos" class="nav-link" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">ToDo List</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a routerLink="/login" class="nav-link" *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()">Login</a></li>
+            <li><a routerLink="/logout" class="nav-link" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
